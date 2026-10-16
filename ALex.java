@@ -1,9 +1,8 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 
-public class ALex
+public class AnalizadorLexico
 {
-    String[] palabrasReservadas = {"boolean", "do", "while", "echo", "float", "function", "if", "int", "let", "prompt", "return", "string", "void", "while"};
     public char leer(BufferedReader fichero) throws IOException
     {
         int caracter = fichero.read();
@@ -13,14 +12,23 @@ public class ALex
         }
             return (char) caracter;
     }
-
-    public boolean esPalRes(String palabra)
+    public static void main(String[] args)
     {
-        boolean encontrado = false;
-        for(int i = 0; i<palabrasReservadas.length && !encontrado; i++)
-            {
-                if(palabrasReservadas[i].equals(palabra)) encontrado=true;
-            }
-        return encontrado;
+        TS_Gestor = new TS_Gestor("tablaDeSimbolos.txt");
+        int res = gestor.createTPalabrasReservadas();
+        if(res==0) System.out.println("Error en la creacion de la Tabla de Palabra Reservadas");
+        gestor.addEntradaTPalabraReservadas("boolean");
+        gestor.addEntradaTPalabraReservadas("do");
+        gestor.addEntradaTPalabraReservadas("while");
+        gestor.addEntradaTPalabraReservadas("echo");
+        gestor.addEntradaTPalabraReservadas("float");
+        gestor.addEntradaTPalabraReservadas("function");
+        gestor.addEntradaTPalabraReservadas("if");
+        gestor.addEntradaTPalabraReservadas("int");
+        gestor.addEntradaTPalabraReservadas("let");
+        gestor.addEntradaTPalabraReservadas("prompt");
+        gestor.addEntradaTPalabraReservadas("return");
+        gestor.addEntradaTPalabraReservadas("string");
+        gestor.addEntradaTPalabraReservadas("void");
     }
 }
