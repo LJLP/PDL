@@ -20,7 +20,11 @@ public class AnalizadorLexico
         return Character.getNumericValue(caracter);
     }
 
-    public 
+    public Token genToken(String codigo)
+    {
+        Token token = new Token(codigo, null);
+        return token;
+    }
     
     public static void main(String[] args)
     {
