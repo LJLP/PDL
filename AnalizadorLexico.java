@@ -16,7 +16,7 @@ public class AnalizadorLexico
     {
         TS_Gestor = new TS_Gestor("tablaDeSimbolos.txt");
         int res = gestor.createTPalabrasReservadas();
-        if(res==0) System.out.println("Error en la creacion de la Tabla de Palabra Reservadas");
+        if(res!=0) System.out.println("Error en la creacion de la Tabla de Palabra Reservadas");
         gestor.addEntradaTPalabraReservadas("boolean");
         gestor.addEntradaTPalabraReservadas("do");
         gestor.addEntradaTPalabraReservadas("while");
@@ -30,5 +30,7 @@ public class AnalizadorLexico
         gestor.addEntradaTPalabraReservadas("return");
         gestor.addEntradaTPalabraReservadas("string");
         gestor.addEntradaTPalabraReservadas("void");
+        int res = gestor.createTSGlobal();
+        if(res!=0) System.out.println("Error en la creación de la Tabla de Simbolos Global");
     }
 }
