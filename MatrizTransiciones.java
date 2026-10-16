@@ -9,7 +9,7 @@ public class MatrizTransiciones
     public static final int COLUMN_COMILLA = 4;
     public static final int COLUMN_BARRA = 5; 
     public static final int COLUMN_PUNTO = 6;
-    public static final int COLUMN_OTROCAR = 7;
+    public static final int COLUMN_TAB = 7;
     public static final int COLUMN_ASIG = 8;
     public static final int COLUMN_COMA = 9;
     public static final int COLUMN_PUNTOYCOMA = 10;
@@ -26,7 +26,7 @@ public class MatrizTransiciones
 
     public static final int NUM_COLUMN = 21;
     public static final int NUM_ESTADOS = 27;
-    public static final int ERROR = -1;
+   
     
     //matriz para saber a que estado voy según el carácter leído y el estado en el que estoy
     public int[][] estados;
