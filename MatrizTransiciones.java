@@ -23,9 +23,6 @@ public class MatrizTransiciones
     public static final int COLUMN_ESPACIO = 18;
     public static final int COLUMN_EOL = 19;
     public static final int COLUMN_OTROCARACTER = 20;
-
-    public static final int NUM_COLUMN = 21;
-    public static final int NUM_ESTADOS = 27;
    
     
     //matriz para saber a que estado voy según el carácter leído y el estado en el que estoy
@@ -48,12 +45,22 @@ public class MatrizTransiciones
             {14,  7, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14},
             { 8,  8,  8,  8, 15,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8}
         };
-        //Se completaria con los estados que tenemos en el AFD
+       
         this.acciones = 
         {
-            
-        }
-        //igual que la de estados pero con las acciones
+
+            {'B','E','B','A','L','A','-1','A','K','K','K','K','K','K','K','K','K','K','A','A','-1'},
+            {'C','C','C','D','D','D','D','D','D','D','D','D','D','D','D','D','D','D','D','D','D'},
+            {'G','F','G','G','G','G','H','G','G','G','G','G','G','G','G','G','G','G','G','G','G'},
+            {'-1','-1','-1','K','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1'},
+            {'-1','-1','-1','-1','-1','A','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1'},
+            {'A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A'},
+            {'-1','I','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1'},
+            {'J','I','J','J','J','J','J','J','J','J','J','J','J','J','J','J','J','J','J','J','J'},
+            {'M','M','M','M','N','M','M','M','M','M','M','M','M','M','M','M','M','M','M','M','M'}
+       }; 
+        
+        
     }
 
     public int convierteCharAInt(char caracter)
