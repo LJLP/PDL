@@ -53,18 +53,18 @@ public class MatrizTransiciones
             case '\t': return COLUMN_ESPACIO;
             case '\r': return COLUMN_EOL;
             case '.': return COLUMN_PUNTO;
+            case '>': return COLUMN_OPRELMAYOR;
             case '+': return COLUMN_MAS;
-            case '/': return COLUMN_BARRA;
-            case '"': return COLUMN_COMILLA;
             case '-': return COLUMN_OPARREST;
+            case '/': return COLUMN_BARRA;
+            case '!': return COLUMN_OPLOGNEG;
+            case '"': return COLUMN_COMILLA;
             case '(': return COLUMN_PARIZQ;
             case ')': return COLUMN_PARDER;
             case '{': return COLUMN_LLAVEIZQ;
             case '}': return COLUMN_LLAVEDER;
             case ',': return COLUMN_COMA;
             case ';': return COLUMN_PUNTOYCOMA;
-            case '!': return COLUMN_OPLOGNEG;
-            case '>': return COLUMN_OPRELMAYOR;
             case '=': return COLUMN_ASIG;
             default: return COLUMN_OTROCAR;
             
