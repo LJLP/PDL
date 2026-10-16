@@ -14,5 +14,13 @@ public class ALex
             return (char) caracter;
     }
 
-    public boolean esPalRes(string palabra)
+    public boolean esPalRes(String palabra)
+    {
+        boolean encontrado = false;
+        for(int i = 0; i<palabrasReservadas.length && !encontrado; i++)
+            {
+                if(palabrasReservadas[i].equals(palabra)) encontrado=true;
+            }
+        return encontrado;
+    }
 }
