@@ -36,7 +36,8 @@ public class MatrizTransiciones
 
     public MatrizTransiciones() 
     {
-        this.estados = { 
+        this.estados = 
+        { 
             { 1,  2,  1,  3,  8,  4, -1,  0, 25, 21, 22, 19, 20, 17, 18, 16, 23, 24,  0,  0, -1},
             { 1,  1,  1, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11},
             {12,  2, 12, 12, 12, 12,  6, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12},
@@ -48,7 +49,10 @@ public class MatrizTransiciones
             { 8,  8,  8,  8, 15,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8}
         };
         //Se completaria con los estados que tenemos en el AFD
-        this.acciones = new char[NUM_ESTADOS][NUM_COLUMN];
+        this.acciones = 
+        {
+            
+        }
         //igual que la de estados pero con las acciones
     }
 
