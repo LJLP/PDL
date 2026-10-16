@@ -3,7 +3,7 @@ import java.io.IOException;
 
 public class ALex
 {
-    String[] palabrasReservadas = {'boolean', 'do', 'while', 'echo', 'float', 'function', 'if', 'int', 'let', 'prompt', 'return', 'string', 'void', 'while'};
+    String[] palabrasReservadas = {"boolean", "do", "while", "echo", "float", "function", "if", "int", "let", "prompt", "return", "string", "void", "while"};
     public char leer(BufferedReader fichero) throws IOException
     {
         int caracter = fichero.read();
