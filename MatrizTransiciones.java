@@ -49,8 +49,8 @@ public class MatrizTransiciones
         switch(caracter)
         {
             case '_': return COLUMN_GUIONBAJO;
-            case ' ';
-            case '\t': return COLUMN_ESPACIO;
+            case ' '; return COLUMN_ESPACIO;
+            case '/t': return COLUMN_TAB;
             case '\r': return COLUMN_EOL;
             case '.': return COLUMN_PUNTO;
             case '>': return COLUMN_OPRELMAYOR;
@@ -66,7 +66,7 @@ public class MatrizTransiciones
             case ',': return COLUMN_COMA;
             case ';': return COLUMN_PUNTOYCOMA;
             case '=': return COLUMN_ASIG;
-            default: return COLUMN_OTROCAR;
+            default: return COLUMN_OTROCARACTER;
             
         }
     }
