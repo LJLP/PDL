@@ -1,0 +1,84 @@
+
+public class MatrizTransiciones
+{
+    //columnas 
+    public static final int COLUMN_LETRA = 0;
+    public static final int COLUMN_DIGITO = 1;
+    public static final int COLUMN_GUIONBAJO = 2;
+    public static final int COLUMN_MAS = 3;
+    public static final int COLUMN_COMILLA = 4;
+    public static final int COLUMN_BARRA = 5; 
+    public static final int COLUMN_PUNTO = 6;
+    public static final int COLUMN_OTROCAR = 7;
+    public static final int COLUMN_ASIG = 8;
+    public static final int COLUMN_COMA = 9;
+    public static final int COLUMN_PUNTOYCOMA = 10;
+    public static final int COLUMN_PARIZQ = 11;
+    public static final int COLUMN_PARDER = 12;
+    public static final int COLUMN_LLAVEIZQ = 13;
+    public static final int COLUMN_LLAVEDER = 14;
+    public static final int COLUMN_OPARREST= 15;
+    public static final int COLUMN_OPLOGNEG = 16;
+    public static final int COLUMN_OPRELMAYOR = 17;
+    public static final int COLUMN_ESPACIO = 18;
+    public static final int COLUMN_EOL = 19;
+
+    public static final int NUM_COLUMN = 21;
+    public static final int NUM_ESTADOS = 27;
+    public static final int ERROR = -1;
+    
+    //matriz para saber a que estado voy según el carácter leído y el estado en el que estoy
+    public int[][] estados;
+
+    //matriz para saber que acción realizar según el carácter leído y el estado en el que estoy
+    public char[][] acciones;
+
+    public MatrizTransiciones() 
+    {
+        this.estados =  new int[NUM_ESTADOS][NUM_COLUMN];
+        //Se completaria con los estados que tenemos en el AFD
+        this.acciones = new char[NUM_ESTADOS][NUM_COLUMN];
+        //igual que la de estados pero con las acciones
+    }
+
+    public int convierteCharAInt(char caracter)
+    {
+        if((caracter >= 'a' && caracter <= 'Z') || (caracter >= 'A' && caracter <= 'Z')) return COLUMN_LETRA;
+        if(caracter >= '0' && caracter <= '9') return COLUMN_DIGITO;
+        switch(caracter)
+        {
+            case '_': return COLUMN_GUIONBAJO;
+            case ' ';
+            case '\t': return COLUMN_ESPACIO;
+            case '\r': return COLUMN_EOL;
+            case '.': return COLUMN_PUNTO;
+            case '+': return COLUMN_MAS;
+            case '/': return COLUMN_BARRA;
+            case '"': return COLUMN_COMILLA;
+            case '-': return COLUMN_OPARREST;
+            case '(': return COLUMN_PARIZQ;
+            case ')': return COLUMN_PARDER;
+            case '{': return COLUMN_LLAVEIZQ;
+            case '}': return COLUMN_LLAVEDER;
+            case ',': return COLUMN_COMA;
+            case ';': return COLUMN_PUNTOYCOMA;
+            case '!': return COLUMN_OPLOGNEG;
+            case '>': return COLUMN_OPRELMAYOR;
+            case '=': return COLUMN_ASIG;
+            default: return COLUMN_OTROCAR;
+            
+        }
+    }
+
+    public int getDiguienteEstado(int estadoActual, char actual)
+    {
+        columna = convierteCharAInt(caracter);
+        return estados[estadoActual][columna];
+    }
+
+    public int getAccion(int estadoActual, char caracter)
+    {
+        columna = convierteCharAInt(caracter);
+        return accciones[estadoActual][columna];
+    }
+}
