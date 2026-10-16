@@ -22,6 +22,7 @@ public class MatrizTransiciones
     public static final int COLUMN_OPRELMAYOR = 17;
     public static final int COLUMN_ESPACIO = 18;
     public static final int COLUMN_EOL = 19;
+    public static final int COLUMN_OTROCARACTER = 20;
 
     public static final int NUM_COLUMN = 21;
     public static final int NUM_ESTADOS = 27;
