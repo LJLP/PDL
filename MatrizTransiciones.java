@@ -101,6 +101,6 @@ public class MatrizTransiciones
     public int getAccion(int estadoActual, char caracter)
     {
         columna = convierteCharAInt(caracter);
-        return accciones[estadoActual][columna];
+        return acciones[estadoActual][columna];
     }
 }
