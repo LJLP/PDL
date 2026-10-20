@@ -34,31 +34,31 @@ public class MatrizTransiciones
 
     public MatrizTransiciones() 
     {
-        this.estados = 
+        this.estados = new int[][]
         { 
-            { 1,  2,  1,  3,  8,  4, -1,  0, 25, 21, 22, 19, 20, 17, 18, 16, 23, 24,  0,  0, -1,  2},
-            { 1,  1,  1, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11},
-            {12,  2, 12, 12, 12, 12,  6, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12},
-            {-1, -1, -1, 13, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1},
-            {-1, -1, -1, -1, -1,  5, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1},
-            { 5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  0,  5,  5},
-            {-1,  7, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1},
-            {14,  7, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14},
-            { 8,  8,  8,  8, 15,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8}
+            { 1,  2,  1,  3,  8,  4, -1,  0, 25, 21, 22, 19, 20, 17, 18, 16, 23, 24,  0,  0, -1,2},
+            { 1,  1,  1, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11,11},
+            {12,  2, 12, 12, 12, 12,  6, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12,12},
+            {-1, -1, -1, 13, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,-1},
+            {-1, -1, -1, -1, -1,  5, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,-1},
+            { 5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  5,  0,  5,5},
+            {-1,  7, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,-1},
+            {14,  7, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14,14},
+            { 8,  8,  8,  8, 15,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,  8,8}
         };
        
-        this.acciones = 
+        this.acciones =new char[][] 
         {
 
-            {'B','E','B','A','L','A','-1','A','K','K','K','K','K','K','K','K','K','K','A','A','-1','Y'},
-            {'C','C','C','D','D','D','D','D','D','D','D','D','D','D','D','D','D','D','D','D','D','D'},
-            {'G','F','G','G','G','G','H','G','G','G','G','G','G','G','G','G','G','G','G','G','G','G'},
-            {'-1','-1','-1','K','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1'},
-            {'-1','-1','-1','-1','-1','A','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1', '-1'},
-            {'A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A'},
-            {'-1','I','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1','-1'},
-            {'J','I','J','J','J','J','J','J','J','J','J','J','J','J','J','J','J','J','J','J','J','J'},
-            {'M','M','M','M','N','M','M','M','M','M','M','M','M','M','M','M','M','M','M','M','M', 'M'}
+        	{'B','E','B','A','L','A','1','A','K','P','Q','R','S','T','U','V','W','X','A','A','0','Y'},
+        	{'C','C','C','D','D','D','D','D','D','D','D','D','D','D','D','D','D','D','D','D','D','D'},
+        	{'G','F','G','G','G','G','H','G','G','G','G','G','G','G','G','G','G','G','G','G','G','G'},
+        	{'1','1','1','O','1','1','1','1','1','1','1','1','0','0','0','0','0','0','0','0','0','0'},
+        	{'0','0','0','0','0','A','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'},
+        	{'A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A','A'},
+        	{'0','I','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'},
+        	{'J','I','J','J','J','J','J','J','J','J','J','J','J','J','J','J','J','J','J','J','J','J'},
+        	{'M','M','M','M','N','M','M','M','M','M','M','M','M','M','M','M','M','M','M','M','M','M'}
        }; 
         
         
@@ -66,14 +66,15 @@ public class MatrizTransiciones
 
     public int convierteCharAInt(char caracter)
     {
-        if((caracter >= 'a' && caracter <= 'Z') || (caracter >= 'A' && caracter <= 'Z')) return COLUMN_LETRA;
+        if((caracter >= 'a' && caracter <= 'z') || (caracter >= 'A' && caracter <= 'Z')) return COLUMN_LETRA;
         if(caracter >= '0' && caracter <= '9') return COLUMN_DIGITO;
         switch(caracter)
         {
             case '_': return COLUMN_GUIONBAJO;
-            case ' '; return COLUMN_ESPACIO;
-            case '/t': return COLUMN_TAB;
+            case ' ': return COLUMN_ESPACIO;
+            case '\t': return COLUMN_TAB;
             case '\r': return COLUMN_EOL;
+            case '\n': return COLUMN_EOL;
             case '.': return COLUMN_PUNTO;
             case '>': return COLUMN_OPRELMAYOR;
             case '+': return COLUMN_MAS;
@@ -94,15 +95,15 @@ public class MatrizTransiciones
         }
     }
 
-    public int getDiguienteEstado(int estadoActual, char actual)
+    public int getSiguienteEstado(int estadoActual, char carActual)
     {
-        columna = convierteCharAInt(caracter);
+        int columna = convierteCharAInt(carActual);
         return estados[estadoActual][columna];
     }
 
-    public int getAccion(int estadoActual, char caracter)
+    public char getAccion(int estadoActual, char caracter)
     {
-        columna = convierteCharAInt(caracter);
+        int columna = convierteCharAInt(caracter);
         return acciones[estadoActual][columna];
     }
 }
